@@ -25,8 +25,10 @@ int maxVowels(char*s,int k){
     }
     maxCount=count;
     for(int i=k;i<n;i++){
-        if(isVowel(s[i-k]))count--;
-        if(isVowel(s[i]))count++;
+        if(isVowel(s[i-k]))
+            count--;
+        if(isVowel(s[i]))
+            count++;
         if(count>maxCount)
             maxCount=count;
     }
