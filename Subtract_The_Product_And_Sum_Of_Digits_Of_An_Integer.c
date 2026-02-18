@@ -13,3 +13,15 @@ Explanation:
 Product of digits = 4 * 4 * 2 * 1 = 32 
 Sum of digits = 4 + 4 + 2 + 1 = 11 
 Result = 32 - 11 = 21
+
+int subtractProductAndSum(int n) {
+    int product=1;
+    int sum=0;
+    while(n>0){
+        int digit=n%10;
+        product=product*digit;
+        sum=sum+digit;
+        n=n/10;
+    }
+    return product-sum;
+}
