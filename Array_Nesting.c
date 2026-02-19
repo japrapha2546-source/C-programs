@@ -8,7 +8,8 @@ int arrayNesting(int* nums,int n){
             start=next;
             count++;
         }
-        if(count>maxlen) maxlen=count;
+        if(count>maxlen)
+            maxlen=count;
     }
     return maxlen;
 }
