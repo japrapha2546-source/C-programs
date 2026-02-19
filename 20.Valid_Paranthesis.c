@@ -1,10 +1,8 @@
-#include <stdbool.h>
-#include <string.h>
 bool isValid(char* s){
-    int n = strlen(s), top = -1;
+    int n=strlen(s),top=-1;
     char stack[n];
-    for(int i = 0; i < n; i++){
-        char c = s[i];
+    for(int i=0;i<n;i++){
+        char c=s[i];
         if(c=='('||c=='{'||c=='[')
           stack[++top]=c;
         else if(top==-1) 
