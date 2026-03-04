@@ -1,11 +1,12 @@
-int compare(const void *a,const void *b){
-    return (*(int*)a - *(int*)b);
+int cmp(const void *a,const void *b){
+    return(*(int*)a- *(int*)b);
 }
+int arrayPairSum(int* nums, int numsSize) {
+    qsort(nums,numsSize,sizeof(int),cmp);
 
-int arrayPairSum(int* nums,int numsSize){
-    qsort(nums,numsSize,sizeof(int),compare);
-    int sum=0;
-    for(int i=0;i<numsSize;i+=2)
-        sum+=nums[i];
-    return sum;
+    int s=0;
+    for(int i=0;i<numsSize;i+=2){
+        s+=nums[i];
+    }
+    return s;
 }
